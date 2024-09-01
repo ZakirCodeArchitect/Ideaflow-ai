@@ -26,7 +26,9 @@ return (
             <SideNav/>
         </div>
         <div className='md:ml-64'> 
-            <Header/>
+            <Header toggleSidebar={function (): void {
+                        throw new Error('Function not implemented.');
+                    } }/>
             {children}
         </div>
     </div>
