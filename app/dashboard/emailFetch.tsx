@@ -10,10 +10,10 @@ const UserProfile: React.FC = () => {
     return <div>Loading...</div>;
   }
 
-  // Access the user's name
-  const userName: string | undefined = user.fullName;
+  // Access the user's name, which could be string, null, or undefined
+  const userName: string | null | undefined = user.fullName;
 
-  // Access the user's profile image
+  // Access the user's profile image, which could be string or undefined
   const userProfileImage: string | undefined = user.imageUrl;
 
   if (!userName) {
@@ -58,7 +58,6 @@ const UserProfile: React.FC = () => {
         <p className="slide-in">
           Hi, {userName.charAt(0).toUpperCase() + userName.slice(1)}
         </p>
-
       </div>
     </>
   );
